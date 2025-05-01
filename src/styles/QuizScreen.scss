@@ -1,0 +1,112 @@
+.quiz-screen {
+  padding: 1.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100dvh;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-bottom: 7.4rem;
+
+    .quiz-screen__progress-bar {
+      height: 0.5rem;
+      background: #e0e0e0;
+      border-radius: 0.4rem;
+      overflow: hidden;
+      margin-bottom: 1.2rem;
+
+      &-fill {
+        height: 100%;
+        background: #007aff;
+        transition: width 0.3s ease;
+      }
+    }
+
+    .quiz-screen__nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2.4rem;
+    }
+
+    .quiz-screen__back-btn {
+      height: 4rem;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .quiz-screen__progress {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #999;
+
+      &-current {
+        color: #1e88e5;
+        display: inline-block;
+      }
+        
+      &-separator,
+      &-total {
+        color: #000;
+        display: inline-block;
+      }
+    }
+
+    .quiz-screen__texts {
+      text-align: center;
+      gap: 1.2rem;
+
+      .quiz-screen__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 1.2rem;
+      }
+
+      .quiz-screen__subtitle {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #777;
+        margin: 0;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto auto;
+    overflow: hidden;
+    height: 32rem;
+
+    .quiz-screen__options-list {
+      overflow-y: auto;
+    }
+
+    .quiz-screen__footer {
+        .continue-btn {
+          font-size: 1.8rem;
+          font-weight: 800;
+          border-radius: 1rem;
+          border: none;
+          background-color: #007aff;
+          color: white;
+          cursor: pointer;
+          transition: opacity 0.3s ease;
+          width: 100%;
+          height: 5rem;
+          margin-top: 1.6rem;
+          margin-bottom: 1.6rem;
+    
+          &:disabled {
+            background: #E8E6EF;
+            cursor: not-allowed;
+          }
+        }
+    }
+  }
+}

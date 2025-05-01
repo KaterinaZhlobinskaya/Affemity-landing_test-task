@@ -1,0 +1,118 @@
+// 
+.email-screen {
+  padding: 2rem;
+
+  &__header {
+    height: 4rem; // 40px
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1.2rem; // 12px
+  }
+
+  &__logo {
+    height: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 2.5rem; // 28px
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.2rem; // 12px
+    margin-top: 0;
+  }
+
+  &__subtitle {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 1.2rem; // 12px
+    margin-top: 0;
+  }
+
+  .email-input {
+    width: 100%;
+    max-width: 30.2rem;
+    height: auto;
+    padding: 1.45rem 1.2rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1.2rem;
+    outline: none;
+
+    &:hover {
+      border: 1px solid #31728D;
+    }
+
+    &--error {
+      border-color: #EA6747;
+    }
+
+    &__error-msg {
+      color: #EA6747;
+      font-size: 1.6rem;
+      margin-top: -0.8rem;
+      margin-bottom: 1.2rem; // 12px
+      text-align: left;
+
+    }
+  }
+
+  .submit-btn {
+    width: 100%;
+    max-width: 32.7rem;
+    height: 5rem; // 50px
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+    border-radius: 1rem;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin-bottom: 1.2rem; // 12px
+
+    &--disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &__terms {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    // margin-top: 1.2rem; // 12px
+    max-width: 36rem; // 360px
+    font-weight: 300;
+    color: #666666;
+
+    & > span:first-child {
+      width: 2.8rem; // 28px
+      height: 2.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      img {
+        width: 2rem; // 20px
+        height: 2rem;
+      }
+    }
+
+    & > span:last-child {
+      margin-left: 1rem;
+      max-width: 29.9rem; // 299px
+    }
+  }
+}
