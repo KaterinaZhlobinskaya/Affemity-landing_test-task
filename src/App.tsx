@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./components/MainPage";
 import QuizPage from "./components/QuizPage";
 import { goalText1, goalText2, SKILLS1, SKILLS2 } from "./utils/MockData";

@@ -1,4 +1,12 @@
 import "../styles/Quiz.scss";
+import choosedIcon from "../assets/images/selected-icon.svg";
+import emoji1 from "../assets/images/emoji1.svg";
+import emoji2 from "../assets/images/emoji2.svg";
+import emoji3 from "../assets/images/emoji3.svg";
+import emoji4 from "../assets/images/emoji4.svg";
+import emoji5 from "../assets/images/emoji5.svg";
+
+const emojiImages = [emoji1, emoji2, emoji3, emoji4, emoji5];
 
 type QuizProps = {
   options: string[];
@@ -19,12 +27,12 @@ const Quiz: React.FC<QuizProps> = ({ options, selected, onToggle }) => {
             onClick={() => onToggle(option)}
           >
             <span className="quiz__option-image">
-              <img src={`/images/emoji${index + 1}.svg`} alt="Skill" />
+              <img src={emojiImages[index]} alt="EmojiImage" />
             </span>
             <span className="quiz__label">{option}</span>
             <span className="quiz__checkbox">
               {isSelected && (
-                <img src="/images/selected-icon.svg" alt="choosed" />
+                <img src={choosedIcon} alt="ChoosedIcon" />
               )}
             </span>
           </button>

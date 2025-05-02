@@ -1,6 +1,8 @@
 import { ChangeEvent, useMemo, useState } from "react";
 import "../styles/EmailScreen.scss";
 import debounce from "lodash.debounce";
+import logo from '../assets/images/logo.svg';
+import protectedIcon from '../assets/images/icon-park-outline_protect.svg';
 
 const validateEmail = (email: string) => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -50,7 +52,7 @@ const EmailScreen: React.FC<EmailScreenProps> = ({ selectedSkills }) => {
     <div className="email-screen">
       <header className="email-screen__header">
         <img
-          src="/images/logo.svg"
+          src={logo}
           alt="Affinity logo"
           className="email-screen__logo"
         />
@@ -84,7 +86,7 @@ const EmailScreen: React.FC<EmailScreenProps> = ({ selectedSkills }) => {
         <span className="email-screen__terms">
         <span className="email-screen__privacy-protected-image">
           <img
-            src="/images/icon-park-outline_protect.svg"
+            src={protectedIcon}
             alt="Privacy protected Image"
           />
         </span>

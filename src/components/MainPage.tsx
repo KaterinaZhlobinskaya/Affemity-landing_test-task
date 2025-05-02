@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/MainPage.scss";
+import logo from '../assets/images/logo.svg';
+import chart from "../assets/images/chart.svg";
 
 const MainPage = () => {
   const navigate = useNavigate();
@@ -16,7 +18,7 @@ const MainPage = () => {
     <div className="main-page">
       <header className="main-page__header">
         <img
-          src="/images/logo.svg"
+          src={logo}
           alt="Affinity logo"
           className="main-page__logo"
         />
@@ -33,7 +35,7 @@ const MainPage = () => {
 
       <main className="main-page__content">
         <div className="main-page__chart">
-          <img src="/images/chart.svg" alt="Chart" />
+          <img src={chart} alt="Chart" />
         </div>
       </main>
 

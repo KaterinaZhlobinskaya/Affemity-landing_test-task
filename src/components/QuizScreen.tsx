@@ -1,5 +1,7 @@
 import "../styles/QuizScreen.scss";
 import Quiz from "./Quiz";
+import logo from '../assets/images/logo.svg';
+import backButtom from '../assets/images/back-button.svg';
 
 type QuizScreenProps = {
   goalText: string;
@@ -35,10 +37,10 @@ const QuizScreen: React.FC<QuizScreenProps> = ({
         </div>
         <span className="quiz-screen__nav-bar">
           <button onClick={handleBack} className="quiz-screen__back-btn">
-            <img src="/images/back-button.svg" alt="Affinity logo" />
+            <img src={backButtom} alt="Back Button" />
           </button>
           <img
-            src="/images/logo.svg"
+            src={logo}
             alt="Affinity logo"
             className="quiz-screen__logo"
           />
