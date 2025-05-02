@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/MainPage.scss";
 
@@ -51,7 +50,7 @@ const MainPage = () => {
               Create emotional attraction
             </button>
           </div>
-          <button className="other-btn" disabled>
+          <button className="main-page__other-btn" disabled>
             Other
           </button>
         </div>

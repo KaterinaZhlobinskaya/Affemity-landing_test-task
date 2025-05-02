@@ -1,14 +1,15 @@
-// 
+@import './variables';
+
 .email-screen {
   padding: 2rem;
 
   &__header {
-    height: 4rem; // 40px
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 1.2rem; // 12px
+    margin-bottom: $common-gap;
   }
 
   &__logo {
@@ -22,18 +23,18 @@
   }
 
   &__title {
-    font-size: 2.5rem; // 28px
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: $common-font-weight;
     text-align: center;
-    margin-bottom: 1.2rem; // 12px
+    margin-bottom: $common-gap;
     margin-top: 0;
   }
 
   &__subtitle {
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: $common-subtitle-font-weight;
     text-align: center;
-    margin-bottom: 1.2rem; // 12px
+    margin-bottom: $common-gap;
     margin-top: 0;
   }
 
@@ -41,27 +42,28 @@
     width: 100%;
     max-width: 30.2rem;
     height: auto;
-    padding: 1.45rem 1.2rem;
+    padding: 1.45rem $common-gap;
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: $common-subtitle-font-weight;
     border-radius: 1rem;
     border: 1px solid #ccc;
-    margin-bottom: 1.2rem;
+    margin-bottom: $common-gap;
     outline: none;
+    cursor: pointer;
 
     &:hover {
-      border: 1px solid #31728D;
+      border: $default-border-on-hover;
     }
 
     &--error {
-      border-color: #EA6747;
+      border-color: $error-color;
     }
 
     &__error-msg {
-      color: #EA6747;
+      color: $error-color;
       font-size: 1.6rem;
       margin-top: -0.8rem;
-      margin-bottom: 1.2rem; // 12px
+      margin-bottom: $common-gap;
       text-align: left;
 
     }
@@ -70,17 +72,17 @@
   .submit-btn {
     width: 100%;
     max-width: 32.7rem;
-    height: 5rem; // 50px
-    padding: 1.2rem;
+    height: 5rem;
+    padding: $common-gap;
     font-size: 1.8rem;
     font-weight: 800;
     border-radius: 1rem;
-    background-color: #1e88e5;
-    color: white;
+    background-color: $color-accent;
+    color: $main-background-color;
     border: none;
     cursor: pointer;
     transition: opacity 0.3s;
-    margin-bottom: 1.2rem; // 12px
+    margin-bottom: $common-gap;
 
     &--disabled {
       cursor: not-allowed;
@@ -91,13 +93,12 @@
     font-size: 1rem;
     display: flex;
     align-items: center;
-    // margin-top: 1.2rem; // 12px
-    max-width: 36rem; // 360px
-    font-weight: 300;
-    color: #666666;
+    max-width: 36rem;
+    font-weight: $common-subtitle-font-weight;
+    color: $privacy-terms-color;
 
     & > span:first-child {
-      width: 2.8rem; // 28px
+      width: 2.8rem;
       height: 2.8rem;
       display: flex;
       align-items: center;
@@ -105,14 +106,14 @@
       flex-shrink: 0;
 
       img {
-        width: 2rem; // 20px
+        width: 2rem;
         height: 2rem;
       }
     }
 
     & > span:last-child {
       margin-left: 1rem;
-      max-width: 29.9rem; // 299px
+      max-width: 29.9rem;
     }
   }
 }

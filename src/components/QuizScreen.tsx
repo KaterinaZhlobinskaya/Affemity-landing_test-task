@@ -14,7 +14,7 @@ type QuizScreenProps = {
 
 const QuizScreen: React.FC<QuizScreenProps> = ({
   goalText,
-  options: skillsList,
+  options,
   stepIndex,
   currentOptions,
   currentOption,
@@ -22,7 +22,7 @@ const QuizScreen: React.FC<QuizScreenProps> = ({
   handleContinue,
   handleBack,
 }) => {
-  const progressPercentage = ((stepIndex + 1) / skillsList.length) * 100;
+  const progressPercentage = ((stepIndex + 1) / options.length) * 100;
 
   return (
     <div className="quiz-screen">
@@ -48,7 +48,7 @@ const QuizScreen: React.FC<QuizScreenProps> = ({
             </span>
             <span className="quiz-screen__progress-separator">/</span>
             <span className="quiz-screen__progress-total">
-              {skillsList.length}
+              {options.length}
             </span>
           </span>
         </span>
@@ -71,7 +71,7 @@ const QuizScreen: React.FC<QuizScreenProps> = ({
 
         <footer className="quiz-screen__footer">
           <button
-            className="continue-btn"
+            className="quiz-screen__continue-btn"
             onClick={handleContinue}
             disabled={currentOption.length === 0}
           >

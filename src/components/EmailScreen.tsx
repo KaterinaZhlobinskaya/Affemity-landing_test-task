@@ -81,8 +81,7 @@ const EmailScreen: React.FC<EmailScreenProps> = ({ selectedSkills }) => {
         >
           Get results
         </button>
-      </main>
-      <span className="email-screen__terms">
+        <span className="email-screen__terms">
         <span className="email-screen__privacy-protected-image">
           <img
             src="/images/icon-park-outline_protect.svg"
@@ -97,6 +96,7 @@ const EmailScreen: React.FC<EmailScreenProps> = ({ selectedSkills }) => {
           </p>
         </span>
       </span>
+      </main>
     </div>
   );
 };

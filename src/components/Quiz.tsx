@@ -1,4 +1,3 @@
-// import "../styles/SkillsScreen.scss";
 import "../styles/Quiz.scss";
 
 type QuizProps = {

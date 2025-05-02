@@ -1,11 +1,9 @@
-// // За замовчуванням: 1rem = 2.66vw
-// html {
-//   font-size: 2.66vw;
-// }
-
-// // Якщо ширина екрану > 480px: 1rem = 15px
-// @media screen and (min-width: 480px) {
-//   html {
-//     font-size: 15px;
-//   }
-// }
+$main-color: #000;
+$color-accent: #1e88e5;
+$error-color: #EA6747;
+$privacy-terms-color: #666666;
+$main-background-color: white;
+$common-gap: 1.2rem;
+$default-border-on-hover: 1px solid #31728D;
+$common-font-weight: 700;
+$common-subtitle-font-weight: 300;
