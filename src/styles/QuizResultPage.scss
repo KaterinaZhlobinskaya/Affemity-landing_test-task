@@ -1,0 +1,53 @@
+@import './variables';
+
+.quiz-result-page {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 2.4rem 1.6rem;
+  min-height: 63.5rem;
+  max-width: 37.5rem;
+  margin: 0 auto;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $common-gap;
+    width: 32.7rem;
+    margin-bottom: $common-gap;
+
+    &__logo {
+      width: 12.63rem;
+      height: 3rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: $common-font-weight;
+    line-height: 1.2;
+    width: 32.7rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 100%;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    width: 32.7rem;
+    margin-top: 20rem;
+  }
+
+  &__question {
+    font-size: 1.8rem;
+    font-weight: $common-font-weight;
+    height: 2rem;
+    text-align: center;
+  }
+}

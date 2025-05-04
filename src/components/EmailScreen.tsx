@@ -3,6 +3,7 @@ import "../styles/EmailScreen.scss";
 import debounce from "lodash.debounce";
 import logo from '../assets/images/logo.svg';
 import protectedIcon from '../assets/images/icon-park-outline_protect.svg';
+import QuizResultPage from "./QuizResultPage";
 
 const validateEmail = (email: string) => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,6 +19,7 @@ const EmailScreen: React.FC<EmailScreenProps> = ({ selectedSkills }) => {
   const [isValidEmail, setIsValidEmail] = useState(false);
   const [isTouched, setIsTouched] = useState(false);
   const isErrorShown = !isValidEmail && isTouched;
+  const [goToGenerateResults, setGoToGenerateResults] = useState(false);
 
   const updateValidation = (email: string) => {
     setIsValidEmail(validateEmail(email));
@@ -42,11 +44,13 @@ const EmailScreen: React.FC<EmailScreenProps> = ({ selectedSkills }) => {
         selectedSkills,
         email,
       });
-      //fetch/axios POST
-      console.log(selectedSkills);
-      alert("Results submitted! Check console.");
+      setGoToGenerateResults(true);
     }
   };
+
+  if (goToGenerateResults) {
+    return <QuizResultPage />
+  }
 
   return (
     <div className="email-screen">

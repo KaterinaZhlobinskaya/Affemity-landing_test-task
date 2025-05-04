@@ -2,6 +2,7 @@ import "../styles/QuizScreen.scss";
 import Quiz from "./Quiz";
 import logo from '../assets/images/logo.svg';
 import backButtom from '../assets/images/back-button.svg';
+import ProgressBar from './common/ProgressBar/ProgressBar';
 
 type QuizScreenProps = {
   goalText: string;
@@ -29,12 +30,7 @@ const QuizScreen: React.FC<QuizScreenProps> = ({
   return (
     <div className="quiz-screen">
       <header className="quiz-screen__header">
-        <div className="quiz-screen__progress-bar">
-          <div
-            className="quiz-screen__progress-bar-fill"
-            style={{ width: `${progressPercentage}%` }}
-          />
-        </div>
+        <ProgressBar progressPercentage={progressPercentage} height={'0.5rem'} />
         <span className="quiz-screen__nav-bar">
           <button onClick={handleBack} className="quiz-screen__back-btn">
             <img src={backButtom} alt="Back Button" />
