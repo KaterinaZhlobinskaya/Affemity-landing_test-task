@@ -1,0 +1,27 @@
+@import "./variables";
+
+.star-box {
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #dcdce6;
+  margin-left: 0.2rem;
+  overflow: hidden;
+
+  &__base {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: $common-gap;
+    height: $common-gap;
+    fill: $main-background-color;
+  }
+
+  &__fill {
+    position: absolute;
+    height: 100%;
+    background: #00b67a;
+    pointer-events: none;
+    overflow: hidden;
+  }
+}

@@ -3,6 +3,8 @@ import logo from "../assets/images/logo.svg";
 import ProgressRow from "./ProgressRow";
 import ModalWindow, { openModal } from "./common/ModalWindow/ModalWindow";
 import "../styles/QuizResultPage.scss";
+import { feedbackData } from '../utils/MockData'
+import ReviewCard from "./ReviewCard";
 
 const questions = [
   "Have you tried changing your love life before?",
@@ -74,9 +76,11 @@ const QuizResultPage = () => {
       </main>
 
       <footer className="quiz-result-page__footer">
-        <span className="quiz-result-page__question">
-          What is your main goal?
-        </span>
+        {feedbackData.map((feedback, i) => {
+          return (
+            <ReviewCard key={i} feedback={feedback} />
+          )
+        })}
       </footer>
     </div>
   );
